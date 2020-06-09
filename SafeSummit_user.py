@@ -17,9 +17,9 @@ bs.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/div[3]/div/form/p[5]/
 bs.implicitly_wait(3)
 # 以上登陆智慧理工
 
-# 从热门应用中点击报平安
+# 从我的收藏中点击报平安
 bs.implicitly_wait(20)
-ele = bs.find_element_by_xpath('/html/body/article[5]/section/div[2]/div[1]/div[4]/pc-card-html-4786697535230905-01/amp-w-frame/div/div[2]/div/div[1]/widget-app-item[7]/div/div/div[2]/div[1]')
+ele = bs.find_element_by_xpath('/html/body/article[5]/section/div[2]/div[1]/div[4]/pc-card-html-4786696181711234-01/amp-w-frame/div/div[2]/div/div/div[2]/div/widget-app-item[1]/div/div/div[2]/div')
 ActionChains(bs).move_to_element(ele).perform()
 ActionChains(bs).click().perform()
 bs.implicitly_wait(3)
@@ -56,4 +56,5 @@ bs.implicitly_wait(3)
 
 bs.find_element_by_xpath("/html/body/div[7]/div/div[2]/button[1]").click()
 bs.implicitly_wait(3)
-# bs.quit()
+bs.quit()
+print("已成功填报")
